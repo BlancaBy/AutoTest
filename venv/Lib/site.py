@@ -5,9 +5,9 @@
 ****************************************************************
 
 In earlier versions of Python (up to 1.5a3), scripts or modules that
-needed to use site-specific modules would place ``import site''
+needed to use site-specific modules would place ``about_import.py site''
 somewhere near the top of their code.  Because of the automatic
-import, this is no longer necessary (but code that does it still
+about_import.py, this is no longer necessary (but code that does it still
 works).
 
 This will append site-specific paths to the module search path.  On
@@ -29,7 +29,7 @@ A path configuration file is a file whose name has the form
 to be added to sys.path.  Non-existing directories (or
 non-directories) are never added to sys.path; no directory is added to
 sys.path more than once.  Blank lines and lines beginning with
-'#' are skipped. Lines starting with 'import' are executed.
+'#' are skipped. Lines starting with 'about_import.py' are executed.
 
 For example, suppose sys.prefix and sys.exec_prefix are set to
 /usr/local and there is a directory /usr/local/lib/python2.X/site-packages
@@ -56,9 +56,9 @@ Note that bletch is omitted because it doesn't exist; bar precedes foo
 because bar.pth comes alphabetically before foo.pth; and spam is
 omitted because it is not mentioned in either path configuration file.
 
-After these path manipulations, an attempt is made to import a module
+After these path manipulations, an attempt is made to about_import.py a module
 named sitecustomize, which can perform arbitrary additional
-site-specific customizations.  If this import fails with an
+site-specific customizations.  If this about_import.py fails with an
 ImportError exception, it is silently ignored.
 
 """
@@ -154,7 +154,7 @@ def _init_pathinfo():
 
 def addpackage(sitedir, name, known_paths):
     """Add a new path to known_paths by combining sitedir and 'name' or execute
-    sitedir if it starts with 'import'"""
+    sitedir if it starts with 'about_import.py'"""
     if known_paths is None:
         _init_pathinfo()
         reset = 1
@@ -169,7 +169,7 @@ def addpackage(sitedir, name, known_paths):
         for line in f:
             if line.startswith("#"):
                 continue
-            if line.startswith("import"):
+            if line.startswith("about_import.py"):
                 exec(line)
                 continue
             line = line.rstrip()
@@ -363,7 +363,7 @@ def setBEGINLIBPATH():
     """The OS/2 EMX port has optional extension modules that do double duty
     as DLLs (and must use the .DLL file extension) for other extensions.
     The library search path needs to be amended so these will be found
-    during module import.  Use BEGINLIBPATH so that these are at the start
+    during module about_import.py.  Use BEGINLIBPATH so that these are at the start
     of the library search path.
 
     """

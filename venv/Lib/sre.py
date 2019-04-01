@@ -3,7 +3,7 @@ It will be removed in the future.  sre was moved to re in version 2.5.
 """
 
 import warnings
-warnings.warn("The sre module is deprecated, please import re.",
+warnings.warn("The sre module is deprecated, please about_import.py re.",
               DeprecationWarning, 2)
 
 from re import *

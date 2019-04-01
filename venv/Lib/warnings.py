@@ -1,7 +1,7 @@
 """Python part of the warnings subsystem."""
 
 # Note: function level imports should *not* be used
-# in this module as it may cause import lock deadlock.
+# in this module as it may cause about_import.py lock deadlock.
 # See bug 683658.
 import linecache
 import sys

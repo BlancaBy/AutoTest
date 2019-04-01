@@ -14,7 +14,7 @@ This exports:
   - os.defpath is the default search path for executables
   - os.devnull is the file path of the null device ('/dev/null', etc.)
 
-Programs that import and use 'os' stand a better chance of being
+Programs that about_import.py and use 'os' stand a better chance of being
 portable between different platforms.  Of course, they must then
 only use functions that are defined by all platforms (e.g., unlink
 and opendir), and leave all pathname manipulation to os.path
@@ -254,8 +254,8 @@ def walk(top, topdown=True, onerror=None, followlinks=False):
 
     Example:
 
-    import os
-    from os.path import join, getsize
+    about_import.py os
+    from os.path about_import.py join, getsize
     for root, dirs, files in os.walk('python/Lib/email'):
         print root, "consumes",
         print sum([getsize(join(root, name)) for name in files]),
@@ -274,7 +274,7 @@ def walk(top, topdown=True, onerror=None, followlinks=False):
     # left to visit.  That logic is copied here.
     try:
         # Note that listdir and error are globals in this module due
-        # to earlier import-*.
+        # to earlier about_import.py-*.
         names = listdir(top)
     except error, err:
         if onerror is not None:

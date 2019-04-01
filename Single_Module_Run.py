@@ -14,20 +14,20 @@ project_dir = os.path.dirname(os.path.abspath(__file__))
 cur_dir = os.path.abspath(os.curdir)
 
 list=[]
-cfile=open(cur_dir+'/caseList.txt')
+cfile=open(cur_dir+'/caselists.txt')
 
 for data in cfile:
     sdata = str(data).strip()
     if sdata != '' and not sdata.startswith("#"):
         list.append(sdata)
-sdir=cur_dir+'/testsuits'+list[0]
+sdir=cur_dir+'/TestSuits'+list[0]
 testunit = unittest.defaultTestLoader.discover(sdir, pattern='AT_*.py')
 print testunit
 #定义log日志文件的目录和名称
 now = time.strftime('%Y-%m-%d_%H_%M_%S', time.localtime(time.time()))
 
 #定义HTML报告的目录和名称
-fileName = os.path.dirname(os.path.abspath(__file__)) + "/Result/Result.html"
+fileName = os.path.dirname(os.path.abspath(__file__)) + "/Result/result.html"
 fp = file(fileName, 'wb')
 
 #设置HTML报告的title和description信息

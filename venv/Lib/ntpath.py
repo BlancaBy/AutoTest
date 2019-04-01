@@ -1,7 +1,7 @@
 # Module 'ntpath' -- common operations on WinNT/Win95 pathnames
 """Common pathname manipulations, WindowsNT/95 version.
 
-Instead of importing this module directly, import os and refer to this
+Instead of importing this module directly, about_import.py os and refer to this
 module as os.path.
 """
 

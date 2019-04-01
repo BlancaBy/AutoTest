@@ -1,6 +1,6 @@
 """
 Path operations common to more than one OS
-Do not use directly.  The OS specific modules import the appropriate
+Do not use directly.  The OS specific modules about_import.py the appropriate
 functions from this module themselves.
 """
 import os

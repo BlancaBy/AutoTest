@@ -1,6 +1,6 @@
 """Common operations on Posix pathnames.
 
-Instead of importing this module directly, import os and refer to
+Instead of importing this module directly, about_import.py os and refer to
 this module as os.path.  The "os.path" name is an alias for this
 module on Posix systems; on other systems (e.g. Mac, Windows),
 os.path provides the same operations in a manner specific to that

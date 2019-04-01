@@ -189,8 +189,8 @@ function showOutput(id, name) {
 
 <div class='heading'>
 <h1>Oscar-mds_接口自动化测试报告</h1>
-<p class='attribute'><strong>Start Time:</strong> 2019-03-27 17:06:50</p>
-<p class='attribute'><strong>Duration:</strong> 0:00:00.747000</p>
+<p class='attribute'><strong>Start Time:</strong> 2019-04-01 19:03:28</p>
+<p class='attribute'><strong>Duration:</strong> 0:00:00.001000</p>
 <p class='attribute'><strong>Status:</strong> Error 1</p>
 
 <p class='description'>用例执行情况：</p>
@@ -222,7 +222,7 @@ function showOutput(id, name) {
 </tr>
 
 <tr class='errorClass'>
-    <td>AT_US_UL_TC001.TC001</td>
+    <td>unittest.loader.ModuleImportFailure</td>
     <td>1</td>
     <td>0</td>
     <td>0</td>
@@ -231,7 +231,7 @@ function showOutput(id, name) {
 </tr>
 
 <tr id='ft1.1' class='none'>
-    <td class='errorCase'><div class='testcase'>testCase: 登陆</div></td>
+    <td class='errorCase'><div class='testcase'>AT_CX_UL_TC001</div></td>
     <td colspan='5' align='center'>
 
     <!--css div popup start-->
@@ -245,14 +245,16 @@ function showOutput(id, name) {
         </div>
         <pre>
         
-ft1.1: Traceback (most recent call last):
-  File "C:\Users\Administrator\Desktop\Oscar-mds_API_AutoTest\testsuits\User\UserLogin\AT_US_UL_TC001.py", line 14, in setUp
-    self.dictdata = pfFile.read_data_from_csv(filepath)
-  File "C:\Users\Administrator\Desktop\Oscar-mds_API_AutoTest\framework\PfFile.py", line 49, in read_data_from_csv
-    wb = xlrd.open_workbook(csv_file_path)
-  File "D:\Python27\lib\site-packages\xlrd\__init__.py", line 395, in open_workbook
-    with open(filename, "rb") as f:
-IOError: [Errno 2] No such file or directory: 'C:\\Users\\Administrator\\Desktop\\Oscar-mds_API_AutoTest/data/User/UserLogin/TestData.xlsx'
+ft1.1: ImportError: Failed to import test module: Login.AT_CX_UL_TC001
+Traceback (most recent call last):
+  File "D:\Python27\lib\unittest\loader.py", line 254, in _find_tests
+    module = self._get_module_from_name(name)
+  File "D:\Python27\lib\unittest\loader.py", line 232, in _get_module_from_name
+    __import__(name)
+  File "C:\Users\Administrator\Desktop\AutoTest\AutoTest\TestSuits\UserLogin\Login\AT_CX_UL_TC001.py", line 10, in &lt;module&gt;
+    class TC001(unittest.TestCase):
+NameError: name 'unittest' is not defined
+
 
 
         </pre>
