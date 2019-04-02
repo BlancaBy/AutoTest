@@ -1,9 +1,9 @@
 #coding=utf-8
 
 import os, requests
-import Framework.PfTime as pfTime
-from Framework.PfFile import *
-from Framework.logger import logger
+import Framwork.PfTime as pfTime
+from Framwork.PfFile import *
+from Framwork.logger import Logger
 logger = Logger(logger="TC").getlog()
 
 # region 处理excel文件中的接口信息

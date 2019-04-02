@@ -1,9 +1,11 @@
 #coding=utf-8
-from TestSuits import *
 import sys
 sys.path.append("/TestSuits")
+from TestSuits import *
 
-filepath = 'C:\Users\Administrator\Desktop\AutoTest\AutoTest\Data\UserLogin\Login\TestData.xlsx'
+
+
+filepath = project_dir + '/Data/UserLogin/Login/TestData.xlsx'
 print filepath
 caseId = 0
 
@@ -11,10 +13,11 @@ class TC001(unittest.TestCase):
 
     # region 用例初始化
     def setUp(self):
-        print filepath
+        print "用例初始化"
         self.dictdata = pfFile.read_data_from_csv(filepath)
-        self.userlogin = UserLogin(self.dictdata[caseId])
-        # self.deviceId = ''
+        print "读取完文件"
+        self.userlogin = Login(self.dictdata[caseId])
+        self.deviceId = ''
         print "setup"
     # endregion
 
@@ -33,7 +36,7 @@ class TC001(unittest.TestCase):
         fromCorporationSerial = '001'
         toCorporationSerial = '002'
         r = self.userlogin.send_request(authCode, encrytedData, fromCorporationSerial, toCorporationSerial)
-        self.userlogin.get_messageCode()
+        self.userlogin.get_messageCode(r)
         # self.deviceId = self.devicestore.get_content(r)
         print "--------------------->"
         print r

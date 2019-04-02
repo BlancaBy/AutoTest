@@ -56,7 +56,8 @@ class Login():
     # 获取response中的messageCode值
     def get_messageCode(self, r):
         res = json.loads(r.text)
-        return res['messageCode']
+        print res
+        return res['messages']
 
     # 获取response中的statusCode值
     def get_statusCode(self, r):

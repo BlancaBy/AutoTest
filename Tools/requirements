@@ -17,4 +17,3 @@ python-dateutil==2.6.1
 requests-toolbelt==0.8.0
 pymysql
 sshtunnel
-HTMLTestRunner= 19.0.3

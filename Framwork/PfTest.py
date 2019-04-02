@@ -5,7 +5,7 @@ import unittest
 # 创建测试套件
 def create_test_suite():
     #测试用例存放位置
-    test_case_dir = ".\\testsuits"
+    test_case_dir = ".\\TestSuits"
     test_unit = unittest.TestSuite()
 
     #discover 方法定义
