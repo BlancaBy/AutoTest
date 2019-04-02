@@ -19,3 +19,4 @@ import Framwork.PfTest as pfTest
 import Framwork.PfTime as pfTime
 
 from APIS.UserLogin.Login.Login import Login
+from APIS.UserLogin.Logout.Logout import Logout
