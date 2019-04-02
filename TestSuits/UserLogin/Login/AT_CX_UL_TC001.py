@@ -3,8 +3,6 @@ import sys
 sys.path.append("/TestSuits")
 from TestSuits import *
 
-
-
 filepath = project_dir + '/Data/UserLogin/Login/TestData.xlsx'
 print filepath
 caseId = 0

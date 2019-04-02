@@ -1,7 +1,8 @@
 #coding=utf-8
 
-import os, requests
+import os, requests,json
 import Framwork.PfTime as pfTime
+import Framwork.PfFile as pfFile
 from Framwork.PfFile import *
 from Framwork.logger import Logger
 logger = Logger(logger="TC").getlog()
@@ -73,9 +74,23 @@ def getConfig(dictdata, rowData=False):
 
 # 发送request请求
 def sendRequests(method, url, **kwargs):
-    r = requests.request(method, url, verify=False, timeout=30, **kwargs)
-    print r
+    # 从excel取出用户信息
+    row = pfFile.read_data_from_csv(project_dir+"\Data\UserLogin\Login\TestData.xlsx")[0]
+    print row
+    result = json.loads(row["Response"])["result"]
+    # 判断路径是否为sdk调用
+    print result["token"]
+    headers = {
+        "cmimToken":result["token"],
+        "Content-Type":"application/json",
+        "charset":"UTF-8"
+    }
+    r = requests.request(method, url, verify=False, timeout=30,headers=headers, **kwargs)
+    #if False:
+    #    TC001().testCase()
+    #    sendRequests(method, url, **kwargs)
     return r
+
 
 # 将response、响应时间、断言结果写入testdata文件中
 def write_result_in_csv(filepath, rowNum, r, result, record=True):
