@@ -19,3 +19,6 @@ import Framwork.PfTest as pfTest
 import Framwork.PfTime as pfTime
 
 from APIS.UserLogin.Login import Login
+from APIS.UserLogin.Logout import Logout
+from APIS.UserLogin.Accredit import Accredit
+

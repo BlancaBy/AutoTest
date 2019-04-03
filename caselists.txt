@@ -1,3 +1,5 @@
 #一定要用英文符号
   /UserLogin
   /UserLogin/Login
+  /UserLogin/Logout
+  /UserLogin/Accredit

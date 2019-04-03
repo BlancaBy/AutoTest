@@ -8,43 +8,32 @@ import Framwork.database as database
 project_dir = os.path.dirname(os.path.dirname(os.path.dirname(os.path.dirname(os.path.abspath(__file__)))))
 
 
-class Login():
-    ''' 用户登录
-        Method：POST
-        URL：https://<base url>/user/v0/login
-        参数：
-        {
-        "authCode": "vj",
-        deviceId": "5BE+ZUUceq3Ycc5MfkElB/VMsKGyG+AqqOo8//JCMy9hp0Z3AiARLedPgG+9gOjOHwGqdcWjPbPtdDjDQqF6+U8tvTfrmQmZRhKmIZg0RpHfQZjEa7wDuHuKuvGQvIY5LvTI47vC3Oy9W2CUG0E4FKw+a0mxZM48CzQx+AOpASH6uE+ABKCkDDuEFFhOErfz3IiL+8AcLEqgExfNy3Cg==",
-        "deviceType": "0001",
-        "encrytedData": "vj5BE+ZUUceq3Ycc5MfkElB/VMsKGyG+AqqOo8//JCMy9hp0Z3AiARLedPgG+9gOjOHwGqdcWjPbPtdDjDQqF6+U8tvTfrmQmZRhKmIZg0RpHfQZjEa7wDuHuKuvGQvIY5LvTI47vC3Oy9W2CUG0E+Cql3dJEXDe727wcz2oSNSWO0pe6HrOdaV4jkfxiCAzemVumwqe1pKU/O6rmJWKEI7/FrRQi/Qtj7/nkWuzlVQ1ZLraxRy2EMx8Msjbs1Cb",
-        "fromCorporationSerial": "001",
-        sequenceId": "001",
-        "toCorporationSerial": "002"
-        "deviceType": "0",
-        "deviceId": "001",
-        }
+class Logout():
+    '''
+    用户登出
+    method:post
+    {
+    deviceId (string, optional): 设备Id,可选 ,
+    deviceType (string): 设备类型 ,
+    serial (string): 车信用户序列号 ,
+    toCorporationSerial (string): 杭研的企业号(必传:002)
+    }
     '''
 
     # region 初始化
     def __init__(self, dictdata):
         self.dictdata = dictdata
         self.config = pfAPI.getConfig(self.dictdata)
-        self.params = json.loads(self.dictdata.get('Params'))#字符串转成字典
-        self.headers = self.config['headers']
+        self.params = json.loads(self.dictdata.get('Params'))
+        self.headers = self.config['headers']  # 字符串转成字典
 
     # endregion
 
     # region 业务操作
     # 发送request
-    def send_request(self, authCode, encrytedData, fromCorporationSerial, toCorporationSerial):
-        self.params['authCode'] = authCode
-        self.params['encrytedData'] = encrytedData
-        self.params['fromCorporationSerial'] = fromCorporationSerial
-        self.params['toCorporationSerial'] = toCorporationSerial
-        data = json.dumps(self.params)  # 字典转成字符串
+    def send_request(self, request):
         # 发送request请求
-        r = pfAPI.sendRequests(self.config['method'], self.config['url'], headers=self.headers, data=data,
+        r = pfAPI.sendRequests(self.config['method'], self.config['url'], headers=self.headers, data=request,
                                auth=self.config['auth'])
         return r
 

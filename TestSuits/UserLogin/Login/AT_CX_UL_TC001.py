@@ -11,12 +11,9 @@ class TC001(unittest.TestCase):
 
     # region 用例初始化
     def setUp(self):
-        print "用例初始化"
         self.dictdata = pfFile.read_data_from_csv(filepath)
-        print "读取完文件"
         self.userlogin = Login(self.dictdata[caseId])
         self.deviceId = ''
-        print "setup"
     # endregion
 
     def tearDown(self):

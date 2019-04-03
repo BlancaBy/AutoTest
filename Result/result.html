@@ -189,9 +189,9 @@ function showOutput(id, name) {
 
 <div class='heading'>
 <h1>Oscar-mds_接口自动化测试报告</h1>
-<p class='attribute'><strong>Start Time:</strong> 2019-04-02 18:34:31</p>
-<p class='attribute'><strong>Duration:</strong> 0:00:00.067000</p>
-<p class='attribute'><strong>Status:</strong> Error 1</p>
+<p class='attribute'><strong>Start Time:</strong> 2019-04-03 17:32:27</p>
+<p class='attribute'><strong>Duration:</strong> 0:00:00.017000</p>
+<p class='attribute'><strong>Status:</strong> Error 2</p>
 
 <p class='description'>用例执行情况：</p>
 </div>
@@ -245,22 +245,59 @@ function showOutput(id, name) {
         </div>
         <pre>
         
-ft1.1: 用例初始化
-读取完文件
-setup
--------------------- AT_US_UL_TC001：登陆 --------------------
-Traceback (most recent call last):
-  File "C:\Users\Administrator\Desktop\AutoTesting\AutoTest\TestSuits\UserLogin\Login\AT_CX_UL_TC001.py", line 36, in testCase
-    r = self.userlogin.send_request(authCode, encrytedData, fromCorporationSerial, toCorporationSerial)
-  File "C:\Users\Administrator\Desktop\AutoTesting\AutoTest\APIS\UserLogin\Login.py", line 48, in send_request
-    auth=self.config['auth'])
-  File "C:\Users\Administrator\Desktop\AutoTesting\AutoTest\Framwork\PfAPI.py", line 79, in sendRequests
-    row = pfFile.read_data_from_csv("../Data/UserLogin/Login/TestData.xlsx")[0]
-  File "C:\Users\Administrator\Desktop\AutoTesting\AutoTest\Framwork\PfFile.py", line 49, in read_data_from_csv
-    wb = xlrd.open_workbook(csv_file_path)
-  File "D:\Python27\lib\site-packages\xlrd\__init__.py", line 395, in open_workbook
-    with open(filename, "rb") as f:
-IOError: [Errno 2] No such file or directory: '../Data/UserLogin/Login/TestData.xlsx'
+ft1.1: Traceback (most recent call last):
+  File "C:\Users\Administrator\Desktop\AutoTesting\AutoTest\TestSuits\UserLogin\Login\AT_CX_UL_TC001.py", line 15, in setUp
+    self.userlogin = Login(self.dictdata[caseId])
+  File "C:\Users\Administrator\Desktop\AutoTesting\AutoTest\APIS\UserLogin\Login.py", line 32, in __init__
+    self.config = pfAPI.getConfig(self.dictdata)
+  File "C:\Users\Administrator\Desktop\AutoTesting\AutoTest\Framwork\PfAPI.py", line 64, in getConfig
+    params = getParams(dictdata, rowData)
+  File "C:\Users\Administrator\Desktop\AutoTesting\AutoTest\Framwork\PfAPI.py", line 30, in getParams
+    if kv[1] == '':
+IndexError: list index out of range
+
+
+        </pre>
+    </div>
+    <!--css div popup end-->
+
+    </td>
+</tr>
+
+<tr class='errorClass'>
+    <td>Logout.AT_CX_ULO_TC001.TC001</td>
+    <td>1</td>
+    <td>0</td>
+    <td>0</td>
+    <td>1</td>
+    <td><a href="javascript:showClassDetail('c2',1)">Detail</a></td>
+</tr>
+
+<tr id='ft2.1' class='none'>
+    <td class='errorCase'><div class='testcase'>testCase: 登出</div></td>
+    <td colspan='5' align='center'>
+
+    <!--css div popup start-->
+    <a class="popup_link" onfocus='this.blur();' href="javascript:showTestDetail('div_ft2.1')" >
+        error</a>
+
+    <div id='div_ft2.1' class="popup_window">
+        <div style='text-align: right; color:red;cursor:pointer'>
+        <a onfocus='this.blur();' onclick="document.getElementById('div_ft2.1').style.display = 'none' " >
+           [x]</a>
+        </div>
+        <pre>
+        
+ft2.1: Traceback (most recent call last):
+  File "C:\Users\Administrator\Desktop\AutoTesting\AutoTest\TestSuits\UserLogin\Logout\AT_CX_ULO_TC001.py", line 16, in setUp
+    self.userInfo = json.loads(responseStr)["result"]
+  File "D:\Python27\lib\json\__init__.py", line 339, in loads
+    return _default_decoder.decode(s)
+  File "D:\Python27\lib\json\decoder.py", line 364, in decode
+    obj, end = self.raw_decode(s, idx=_w(s, 0).end())
+  File "D:\Python27\lib\json\decoder.py", line 382, in raw_decode
+    raise ValueError("No JSON object could be decoded")
+ValueError: No JSON object could be decoded
 
 
         </pre>
@@ -272,10 +309,10 @@ IOError: [Errno 2] No such file or directory: '../Data/UserLogin/Login/TestData.
 
 <tr id='total_row'>
     <td>Total</td>
-    <td>1</td>
+    <td>2</td>
     <td>0</td>
     <td>0</td>
-    <td>1</td>
+    <td>2</td>
     <td>&nbsp;</td>
 </tr>
 </table>

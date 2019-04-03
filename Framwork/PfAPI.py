@@ -1,6 +1,6 @@
 #coding=utf-8
 
-import os, requests,json
+import os, requests,json,string
 import Framwork.PfTime as pfTime
 import Framwork.PfFile as pfFile
 from Framwork.PfFile import *
@@ -74,18 +74,17 @@ def getConfig(dictdata, rowData=False):
 
 # 发送request请求
 def sendRequests(method, url, **kwargs):
+    print url
     # 从excel取出用户信息
-    row = pfFile.read_data_from_csv(project_dir+"\Data\UserLogin\Login\TestData.xlsx")[0]
-    print row
-    result = json.loads(row["Response"])["result"]
-    # 判断路径是否为sdk调用
-    print result["token"]
-    headers = {
-        "cmimToken":result["token"],
-        "Content-Type":"application/json",
-        "charset":"UTF-8"
-    }
-    r = requests.request(method, url, verify=False, timeout=30,headers=headers, **kwargs)
+    if string.find(url,"login") == -1:
+        row = pfFile.read_data_from_csv(project_dir+"\Data\UserLogin\Login\TestData.xlsx")[0]
+        print row
+        result = json.loads(row["Response"])["result"]
+        # 判断路径是否为sdk调用
+        print result["token"]
+        kwargs["headers"]["cmimToken"] = result["token"]
+    print kwargs
+    r = requests.request(method, url, verify=False, timeout=30,**kwargs)
     #if False:
     #    TC001().testCase()
     #    sendRequests(method, url, **kwargs)
