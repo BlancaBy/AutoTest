@@ -1,5 +1,27 @@
 #一定要用英文符号
-  /UserLogin
-  /UserLogin/Login
-  /UserLogin/Logout
-  /UserLogin/Accredit
+  #/LoginController
+  #/LoginController/Login
+  #/LoginController/Logout
+  #/LoginController/Accredit
+  #/LoginController/CarLogin
+  #/LoginController/CarAccredit
+  #/LoginController/LogoutByPhone
+
+  #/UserController
+  #/UserController/UpdateUserinfo
+  #/UserController/GetFriendList
+
+  #AddressBookController
+  #AddressBookController/UploadAdressBook
+  #AddressBookController/CheckAdressBookVersion
+
+
+
+  #/CorporationController
+  #/CorporationController/CorporationLogin
+  #/CorporationController/CheckCorporationToken
+
+
+
+
+

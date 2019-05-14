@@ -1,8 +1,8 @@
 #coding=utf-8
-from Framwork.PfTest import create_test_suite
+from Framework.PfTest import create_test_suite
 from Tools import HTMLTestRunner
 import time,socket,os, requests
-from framework.PfTest import *
+from Framework.PfTest import *
 requests.packages.urllib3.disable_warnings()
 
 # 创建testsuits配置文件
@@ -24,7 +24,7 @@ fp = file(fileName, 'wb')
 #设置HTML报告的title和description信息
 runner = HTMLTestRunner.HTMLTestRunner(
     stream = fp,
-    title = u'Oscar-mds_接口自动化测试报告',
+    title = u'CarChat_接口自动化测试报告',
     description = u'用例执行情况：')
 
 #启动测试套件

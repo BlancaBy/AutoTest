@@ -2,7 +2,7 @@
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
 <html xmlns="http://www.w3.org/1999/xhtml">
 <head>
-    <title>Oscar-mds_接口自动化测试报告</title>
+    <title>CarChat_接口自动化测试报告</title>
     <meta name="generator" content="HTMLTestRunner 0.8.2"/>
     <meta http-equiv="Content-Type" content="text/html; charset=UTF-8"/>
     
@@ -188,10 +188,10 @@ function showOutput(id, name) {
 --></script>
 
 <div class='heading'>
-<h1>Oscar-mds_接口自动化测试报告</h1>
-<p class='attribute'><strong>Start Time:</strong> 2019-04-03 17:32:27</p>
-<p class='attribute'><strong>Duration:</strong> 0:00:00.017000</p>
-<p class='attribute'><strong>Status:</strong> Error 2</p>
+<h1>CarChat_接口自动化测试报告</h1>
+<p class='attribute'><strong>Start Time:</strong> 2019-05-07 18:11:42</p>
+<p class='attribute'><strong>Duration:</strong> 0:00:09.833000</p>
+<p class='attribute'><strong>Status:</strong> Pass 25</p>
 
 <p class='description'>用例执行情况：</p>
 </div>
@@ -221,40 +221,37 @@ function showOutput(id, name) {
     <td>View</td>
 </tr>
 
-<tr class='errorClass'>
-    <td>Login.AT_CX_UL_TC001.TC001</td>
+<tr class='passClass'>
+    <td>CheckAdressVersion</td>
+    <td>1</td>
     <td>1</td>
     <td>0</td>
     <td>0</td>
-    <td>1</td>
     <td><a href="javascript:showClassDetail('c1',1)">Detail</a></td>
 </tr>
 
-<tr id='ft1.1' class='none'>
-    <td class='errorCase'><div class='testcase'>testCase: 登陆</div></td>
+<tr id='pt1.1' class='hiddenRow'>
+    <td class='none'><div class='testcase'>testCase: 检查通讯录版本</div></td>
     <td colspan='5' align='center'>
 
     <!--css div popup start-->
-    <a class="popup_link" onfocus='this.blur();' href="javascript:showTestDetail('div_ft1.1')" >
-        error</a>
+    <a class="popup_link" onfocus='this.blur();' href="javascript:showTestDetail('div_pt1.1')" >
+        pass</a>
 
-    <div id='div_ft1.1' class="popup_window">
+    <div id='div_pt1.1' class="popup_window">
         <div style='text-align: right; color:red;cursor:pointer'>
-        <a onfocus='this.blur();' onclick="document.getElementById('div_ft1.1').style.display = 'none' " >
+        <a onfocus='this.blur();' onclick="document.getElementById('div_pt1.1').style.display = 'none' " >
            [x]</a>
         </div>
         <pre>
         
-ft1.1: Traceback (most recent call last):
-  File "C:\Users\Administrator\Desktop\AutoTesting\AutoTest\TestSuits\UserLogin\Login\AT_CX_UL_TC001.py", line 15, in setUp
-    self.userlogin = Login(self.dictdata[caseId])
-  File "C:\Users\Administrator\Desktop\AutoTesting\AutoTest\APIS\UserLogin\Login.py", line 32, in __init__
-    self.config = pfAPI.getConfig(self.dictdata)
-  File "C:\Users\Administrator\Desktop\AutoTesting\AutoTest\Framwork\PfAPI.py", line 64, in getConfig
-    params = getParams(dictdata, rowData)
-  File "C:\Users\Administrator\Desktop\AutoTesting\AutoTest\Framwork\PfAPI.py", line 30, in getParams
-    if kv[1] == '':
-IndexError: list index out of range
+pt1.1: -------------------- AT_CX_CAV_TC001：检查通讯录版本 --------------------
+token值: b5b91835dc856d25e9cdc89286e6b5a2ae98904094c1d857f942bddaf397d96c
+访问地址： http://carchat.uat.k8s02.ecloud.virtueit.net:81/user/v0/addressBook/find?userSerial=c3d55d7493c94930a0f9855b0c93af2a
+ 请求结果： {"status":"0000_0","messages":["执行成功"],"result":{"id":2319,"serial":"5dc901c646e74c189c2b24b8f97a3e8c","createTime":1557223275000,"createBy":"c3d55d7493c94930a0f9855b0c93af2a","modifyTime":null,"modifyBy":null,"isDelete":0,"userSerial":"c3d55d7493c94930a0f9855b0c93af2a","version":5,"device":null,"addressBookMD5":null,"contactInfoList":[{"id":219426,"serial":"527e573814534653a0e1e317cd1a0026","createTime":1557223275000,"createBy":"c3d55d7493c94930a0f9855b0c93af2a","modifyTime":1557223275000,"modifyBy":"c3d55d7493c94930a0f9855b0c93af2a","isDelete":0,"userInfoSerial":"c3d55d7493c94930a0f9855b0c93af2a","firstName":"JM有效三","lastName":null,"company":null,"source":"0","birthday":null,"comments":null,"userAddressBookSerial":"5dc901c646e74c189c2b24b8f97a3e8c","icon":null,"userSerial":null,"label":"JMyouxiaosan","phones":[{"id":260472,"serial":"1ca5d89f74f74ca2b5e6ba04abac9f1a","createTime":1557223275000,"createBy":"527e573814534653a0e1e317cd1a0026","modifyTime":null,"modifyBy":null,"isDelete":0,"contactInfoSerial":"527e573814534653a0e1e317cd1a0026","phone":"+8615510076103","type":null,"isDefault":null}],"emails":[]},{"id":219427,"serial":"5e54afed1a66496991ee45c9a698dbaa","createTime":1557223275000,"createBy":"c3d55d7493c94930a0f9855b0c93af2a","modifyTime":1557223275000,"modifyBy":"c3d55d7493c94930a0f9855b0c93af2a","isDelete":0,"userInfoSerial":"c3d55d7493c94930a0f9855b0c93af2a","firstName":"JM有效二","lastName":null,"company":null,"source":"0","birthday":null,"comments":null,"userAddressBookSerial":"5dc901c646e74c189c2b24b8f97a3e8c","icon":null,"userSerial":null,"label":"JMyouxiaoer","phones":[{"id":260473,"serial":"3a4f16aa962b4a9392e567eafc9f2012","createTime":1557223275000,"createBy":"5e54afed1a66496991ee45c9a698dbaa","modifyTime":null,"modifyBy":null,"isDelete":0,"contactInfoSerial":"5e54afed1a66496991ee45c9a698dbaa","phone":"+8615510076104","type":null,"isDefault":null}],"emails":[]},{"id":219428,"serial":"8d926d9a39ef4cdc80a3479553485fdc","createTime":1557223275000,"createBy":"c3d55d7493c94930a0f9855b0c93af2a","modifyTime":1557223275000,"modifyBy":"c3d55d7493c94930a0f9855b0c93af2a","isDelete":0,"userInfoSerial":"c3d55d7493c94930a0f9855b0c93af2a","firstName":"JM钱","lastName":null,"company":null,"source":"0","birthday":null,"comments":null,"userAddressBookSerial":"5dc901c646e74c189c2b24b8f97a3e8c","icon":null,"userSerial":null,"label":"JMqian","phones":[{"id":260474,"serial":"c40acdae92654ac2bd9bebccd49fcd09","createTime":1557223275000,"createBy":"8d926d9a39ef4cdc80a3479553485fdc","modifyTime":null,"modifyBy":null,"isDelete":0,"contactInfoSerial":"8d926d9a39ef4cdc80a3479553485fdc","phone":"8615816432095","type":null,"isDefault":null},{"id":260475,"serial":"c36e7fb118f6471e8daebc316d054f88","createTime":1557223275000,"createBy":"8d926d9a39ef4cdc80a3479553485fdc","modifyTime":null,"modifyBy":null,"isDelete":0,"contactInfoSerial":"8d926d9a39ef4cdc80a3479553485fdc","phone":"8613760813529","type":null,"isDefault":null},{"id":260476,"serial":"e8e80da6e9334a11a01bf4a94505d6e0","createTime":1557223275000,"createBy":"8d926d9a39ef4cdc80a3479553485fdc","modifyTime":null,"modifyBy":null,"isDelete":0,"contactInfoSerial":"8d926d9a39ef4cdc80a3479553485fdc","phone":"15261475308","type":null,"isDefault":null},{"id":260477,"serial":"a6a7703374a54e32a8ca34e183612309","createTime":1557223275000,"createBy":"8d926d9a39ef4cdc80a3479553485fdc","modifyTime":null,"modifyBy":null,"isDelete":0,"contactInfoSerial":"8d926d9a39ef4cdc80a3479553485fdc","phone":"16817905642","type":null,"isDefault":null},{"id":260478,"serial":"5e5016941fed480087e8b22153e8d96b","createTime":1557223275000,"createBy":"8d926d9a39ef4cdc80a3479553485fdc","modifyTime":null,"modifyBy":null,"isDelete":0,"contactInfoSerial":"8d926d9a39ef4cdc80a3479553485fdc","phone":"+8613165724980","type":null,"isDefault":null}],"emails":[]}]}}
+---------------------&gt;
+D:\Python27\lib\site-packages\openpyxl\worksheet\worksheet.py:303: UserWarning: Using a coordinate with ws.cell is deprecated. Use ws[coordinate] instead
+  warn("Using a coordinate with ws.cell is deprecated. Use ws[coordinate] instead")
 
 
         </pre>
@@ -264,40 +261,924 @@ IndexError: list index out of range
     </td>
 </tr>
 
-<tr class='errorClass'>
-    <td>Logout.AT_CX_ULO_TC001.TC001</td>
+<tr class='passClass'>
+    <td>FindAddressBook</td>
+    <td>1</td>
     <td>1</td>
     <td>0</td>
     <td>0</td>
-    <td>1</td>
     <td><a href="javascript:showClassDetail('c2',1)">Detail</a></td>
 </tr>
 
-<tr id='ft2.1' class='none'>
-    <td class='errorCase'><div class='testcase'>testCase: 登出</div></td>
+<tr id='pt2.1' class='hiddenRow'>
+    <td class='none'><div class='testcase'>testCase: 查看通讯录</div></td>
     <td colspan='5' align='center'>
 
     <!--css div popup start-->
-    <a class="popup_link" onfocus='this.blur();' href="javascript:showTestDetail('div_ft2.1')" >
-        error</a>
+    <a class="popup_link" onfocus='this.blur();' href="javascript:showTestDetail('div_pt2.1')" >
+        pass</a>
 
-    <div id='div_ft2.1' class="popup_window">
+    <div id='div_pt2.1' class="popup_window">
         <div style='text-align: right; color:red;cursor:pointer'>
-        <a onfocus='this.blur();' onclick="document.getElementById('div_ft2.1').style.display = 'none' " >
+        <a onfocus='this.blur();' onclick="document.getElementById('div_pt2.1').style.display = 'none' " >
            [x]</a>
         </div>
         <pre>
         
-ft2.1: Traceback (most recent call last):
-  File "C:\Users\Administrator\Desktop\AutoTesting\AutoTest\TestSuits\UserLogin\Logout\AT_CX_ULO_TC001.py", line 16, in setUp
-    self.userInfo = json.loads(responseStr)["result"]
-  File "D:\Python27\lib\json\__init__.py", line 339, in loads
-    return _default_decoder.decode(s)
-  File "D:\Python27\lib\json\decoder.py", line 364, in decode
-    obj, end = self.raw_decode(s, idx=_w(s, 0).end())
-  File "D:\Python27\lib\json\decoder.py", line 382, in raw_decode
-    raise ValueError("No JSON object could be decoded")
-ValueError: No JSON object could be decoded
+pt2.1: -------------------- AT_CX_FA_TC001：查看通讯录 --------------------
+token值: b5b91835dc856d25e9cdc89286e6b5a2ae98904094c1d857f942bddaf397d96c
+访问地址： http://carchat.uat.k8s02.ecloud.virtueit.net:81/user/v0//addressBook/find?userSerial=c3d55d7493c94930a0f9855b0c93af2a
+ 请求结果： {"status":"0000_0","messages":["执行成功"],"result":{"id":2319,"serial":"5dc901c646e74c189c2b24b8f97a3e8c","createTime":1557223275000,"createBy":"c3d55d7493c94930a0f9855b0c93af2a","modifyTime":null,"modifyBy":null,"isDelete":0,"userSerial":"c3d55d7493c94930a0f9855b0c93af2a","version":5,"device":null,"addressBookMD5":null,"contactInfoList":[{"id":219426,"serial":"527e573814534653a0e1e317cd1a0026","createTime":1557223275000,"createBy":"c3d55d7493c94930a0f9855b0c93af2a","modifyTime":1557223275000,"modifyBy":"c3d55d7493c94930a0f9855b0c93af2a","isDelete":0,"userInfoSerial":"c3d55d7493c94930a0f9855b0c93af2a","firstName":"JM有效三","lastName":null,"company":null,"source":"0","birthday":null,"comments":null,"userAddressBookSerial":"5dc901c646e74c189c2b24b8f97a3e8c","icon":null,"userSerial":null,"label":"JMyouxiaosan","phones":[{"id":260472,"serial":"1ca5d89f74f74ca2b5e6ba04abac9f1a","createTime":1557223275000,"createBy":"527e573814534653a0e1e317cd1a0026","modifyTime":null,"modifyBy":null,"isDelete":0,"contactInfoSerial":"527e573814534653a0e1e317cd1a0026","phone":"+8615510076103","type":null,"isDefault":null}],"emails":[]},{"id":219427,"serial":"5e54afed1a66496991ee45c9a698dbaa","createTime":1557223275000,"createBy":"c3d55d7493c94930a0f9855b0c93af2a","modifyTime":1557223275000,"modifyBy":"c3d55d7493c94930a0f9855b0c93af2a","isDelete":0,"userInfoSerial":"c3d55d7493c94930a0f9855b0c93af2a","firstName":"JM有效二","lastName":null,"company":null,"source":"0","birthday":null,"comments":null,"userAddressBookSerial":"5dc901c646e74c189c2b24b8f97a3e8c","icon":null,"userSerial":null,"label":"JMyouxiaoer","phones":[{"id":260473,"serial":"3a4f16aa962b4a9392e567eafc9f2012","createTime":1557223275000,"createBy":"5e54afed1a66496991ee45c9a698dbaa","modifyTime":null,"modifyBy":null,"isDelete":0,"contactInfoSerial":"5e54afed1a66496991ee45c9a698dbaa","phone":"+8615510076104","type":null,"isDefault":null}],"emails":[]},{"id":219428,"serial":"8d926d9a39ef4cdc80a3479553485fdc","createTime":1557223275000,"createBy":"c3d55d7493c94930a0f9855b0c93af2a","modifyTime":1557223275000,"modifyBy":"c3d55d7493c94930a0f9855b0c93af2a","isDelete":0,"userInfoSerial":"c3d55d7493c94930a0f9855b0c93af2a","firstName":"JM钱","lastName":null,"company":null,"source":"0","birthday":null,"comments":null,"userAddressBookSerial":"5dc901c646e74c189c2b24b8f97a3e8c","icon":null,"userSerial":null,"label":"JMqian","phones":[{"id":260474,"serial":"c40acdae92654ac2bd9bebccd49fcd09","createTime":1557223275000,"createBy":"8d926d9a39ef4cdc80a3479553485fdc","modifyTime":null,"modifyBy":null,"isDelete":0,"contactInfoSerial":"8d926d9a39ef4cdc80a3479553485fdc","phone":"8615816432095","type":null,"isDefault":null},{"id":260475,"serial":"c36e7fb118f6471e8daebc316d054f88","createTime":1557223275000,"createBy":"8d926d9a39ef4cdc80a3479553485fdc","modifyTime":null,"modifyBy":null,"isDelete":0,"contactInfoSerial":"8d926d9a39ef4cdc80a3479553485fdc","phone":"8613760813529","type":null,"isDefault":null},{"id":260476,"serial":"e8e80da6e9334a11a01bf4a94505d6e0","createTime":1557223275000,"createBy":"8d926d9a39ef4cdc80a3479553485fdc","modifyTime":null,"modifyBy":null,"isDelete":0,"contactInfoSerial":"8d926d9a39ef4cdc80a3479553485fdc","phone":"15261475308","type":null,"isDefault":null},{"id":260477,"serial":"a6a7703374a54e32a8ca34e183612309","createTime":1557223275000,"createBy":"8d926d9a39ef4cdc80a3479553485fdc","modifyTime":null,"modifyBy":null,"isDelete":0,"contactInfoSerial":"8d926d9a39ef4cdc80a3479553485fdc","phone":"16817905642","type":null,"isDefault":null},{"id":260478,"serial":"5e5016941fed480087e8b22153e8d96b","createTime":1557223275000,"createBy":"8d926d9a39ef4cdc80a3479553485fdc","modifyTime":null,"modifyBy":null,"isDelete":0,"contactInfoSerial":"8d926d9a39ef4cdc80a3479553485fdc","phone":"+8613165724980","type":null,"isDefault":null}],"emails":[]}]}}
+---------------------&gt;
+
+
+        </pre>
+    </div>
+    <!--css div popup end-->
+
+    </td>
+</tr>
+
+<tr class='passClass'>
+    <td>FindAddressVersion</td>
+    <td>1</td>
+    <td>1</td>
+    <td>0</td>
+    <td>0</td>
+    <td><a href="javascript:showClassDetail('c3',1)">Detail</a></td>
+</tr>
+
+<tr id='pt3.1' class='hiddenRow'>
+    <td class='none'><div class='testcase'>testCase: 查看通讯录</div></td>
+    <td colspan='5' align='center'>
+
+    <!--css div popup start-->
+    <a class="popup_link" onfocus='this.blur();' href="javascript:showTestDetail('div_pt3.1')" >
+        pass</a>
+
+    <div id='div_pt3.1' class="popup_window">
+        <div style='text-align: right; color:red;cursor:pointer'>
+        <a onfocus='this.blur();' onclick="document.getElementById('div_pt3.1').style.display = 'none' " >
+           [x]</a>
+        </div>
+        <pre>
+        
+pt3.1: -------------------- AT_CX_FAV_TC001：查询通讯录版本 --------------------
+token值: b5b91835dc856d25e9cdc89286e6b5a2ae98904094c1d857f942bddaf397d96c
+访问地址： http://carchat.uat.k8s02.ecloud.virtueit.net:81/user/v0/addressBook/find?userSerial=c3d55d7493c94930a0f9855b0c93af2a
+ 请求结果： {"status":"0000_0","messages":["执行成功"],"result":{"id":2319,"serial":"5dc901c646e74c189c2b24b8f97a3e8c","createTime":1557223275000,"createBy":"c3d55d7493c94930a0f9855b0c93af2a","modifyTime":null,"modifyBy":null,"isDelete":0,"userSerial":"c3d55d7493c94930a0f9855b0c93af2a","version":5,"device":null,"addressBookMD5":null,"contactInfoList":[{"id":219426,"serial":"527e573814534653a0e1e317cd1a0026","createTime":1557223275000,"createBy":"c3d55d7493c94930a0f9855b0c93af2a","modifyTime":1557223275000,"modifyBy":"c3d55d7493c94930a0f9855b0c93af2a","isDelete":0,"userInfoSerial":"c3d55d7493c94930a0f9855b0c93af2a","firstName":"JM有效三","lastName":null,"company":null,"source":"0","birthday":null,"comments":null,"userAddressBookSerial":"5dc901c646e74c189c2b24b8f97a3e8c","icon":null,"userSerial":null,"label":"JMyouxiaosan","phones":[{"id":260472,"serial":"1ca5d89f74f74ca2b5e6ba04abac9f1a","createTime":1557223275000,"createBy":"527e573814534653a0e1e317cd1a0026","modifyTime":null,"modifyBy":null,"isDelete":0,"contactInfoSerial":"527e573814534653a0e1e317cd1a0026","phone":"+8615510076103","type":null,"isDefault":null}],"emails":[]},{"id":219427,"serial":"5e54afed1a66496991ee45c9a698dbaa","createTime":1557223275000,"createBy":"c3d55d7493c94930a0f9855b0c93af2a","modifyTime":1557223275000,"modifyBy":"c3d55d7493c94930a0f9855b0c93af2a","isDelete":0,"userInfoSerial":"c3d55d7493c94930a0f9855b0c93af2a","firstName":"JM有效二","lastName":null,"company":null,"source":"0","birthday":null,"comments":null,"userAddressBookSerial":"5dc901c646e74c189c2b24b8f97a3e8c","icon":null,"userSerial":null,"label":"JMyouxiaoer","phones":[{"id":260473,"serial":"3a4f16aa962b4a9392e567eafc9f2012","createTime":1557223275000,"createBy":"5e54afed1a66496991ee45c9a698dbaa","modifyTime":null,"modifyBy":null,"isDelete":0,"contactInfoSerial":"5e54afed1a66496991ee45c9a698dbaa","phone":"+8615510076104","type":null,"isDefault":null}],"emails":[]},{"id":219428,"serial":"8d926d9a39ef4cdc80a3479553485fdc","createTime":1557223275000,"createBy":"c3d55d7493c94930a0f9855b0c93af2a","modifyTime":1557223275000,"modifyBy":"c3d55d7493c94930a0f9855b0c93af2a","isDelete":0,"userInfoSerial":"c3d55d7493c94930a0f9855b0c93af2a","firstName":"JM钱","lastName":null,"company":null,"source":"0","birthday":null,"comments":null,"userAddressBookSerial":"5dc901c646e74c189c2b24b8f97a3e8c","icon":null,"userSerial":null,"label":"JMqian","phones":[{"id":260474,"serial":"c40acdae92654ac2bd9bebccd49fcd09","createTime":1557223275000,"createBy":"8d926d9a39ef4cdc80a3479553485fdc","modifyTime":null,"modifyBy":null,"isDelete":0,"contactInfoSerial":"8d926d9a39ef4cdc80a3479553485fdc","phone":"8615816432095","type":null,"isDefault":null},{"id":260475,"serial":"c36e7fb118f6471e8daebc316d054f88","createTime":1557223275000,"createBy":"8d926d9a39ef4cdc80a3479553485fdc","modifyTime":null,"modifyBy":null,"isDelete":0,"contactInfoSerial":"8d926d9a39ef4cdc80a3479553485fdc","phone":"8613760813529","type":null,"isDefault":null},{"id":260476,"serial":"e8e80da6e9334a11a01bf4a94505d6e0","createTime":1557223275000,"createBy":"8d926d9a39ef4cdc80a3479553485fdc","modifyTime":null,"modifyBy":null,"isDelete":0,"contactInfoSerial":"8d926d9a39ef4cdc80a3479553485fdc","phone":"15261475308","type":null,"isDefault":null},{"id":260477,"serial":"a6a7703374a54e32a8ca34e183612309","createTime":1557223275000,"createBy":"8d926d9a39ef4cdc80a3479553485fdc","modifyTime":null,"modifyBy":null,"isDelete":0,"contactInfoSerial":"8d926d9a39ef4cdc80a3479553485fdc","phone":"16817905642","type":null,"isDefault":null},{"id":260478,"serial":"5e5016941fed480087e8b22153e8d96b","createTime":1557223275000,"createBy":"8d926d9a39ef4cdc80a3479553485fdc","modifyTime":null,"modifyBy":null,"isDelete":0,"contactInfoSerial":"8d926d9a39ef4cdc80a3479553485fdc","phone":"+8613165724980","type":null,"isDefault":null}],"emails":[]}]}}
+---------------------&gt;
+
+
+        </pre>
+    </div>
+    <!--css div popup end-->
+
+    </td>
+</tr>
+
+<tr class='passClass'>
+    <td>UploadAddressBook</td>
+    <td>1</td>
+    <td>1</td>
+    <td>0</td>
+    <td>0</td>
+    <td><a href="javascript:showClassDetail('c4',1)">Detail</a></td>
+</tr>
+
+<tr id='pt4.1' class='hiddenRow'>
+    <td class='none'><div class='testcase'>testCase: 上传通讯录</div></td>
+    <td colspan='5' align='center'>
+
+    <!--css div popup start-->
+    <a class="popup_link" onfocus='this.blur();' href="javascript:showTestDetail('div_pt4.1')" >
+        pass</a>
+
+    <div id='div_pt4.1' class="popup_window">
+        <div style='text-align: right; color:red;cursor:pointer'>
+        <a onfocus='this.blur();' onclick="document.getElementById('div_pt4.1').style.display = 'none' " >
+           [x]</a>
+        </div>
+        <pre>
+        
+pt4.1: -------------------- AT_CX_UAB_TC001：上传通讯录 --------------------
+token值: b5b91835dc856d25e9cdc89286e6b5a2ae98904094c1d857f942bddaf397d96c
+访问地址： http://carchat.uat.k8s02.ecloud.virtueit.net:81/user/v0/addressBook/upload
+ 请求结果： {"status":"0000_0","messages":["执行成功"],"result":6}
+---------------------&gt;
+
+
+        </pre>
+    </div>
+    <!--css div popup end-->
+
+    </td>
+</tr>
+
+<tr class='passClass'>
+    <td>CheckCmimToken</td>
+    <td>1</td>
+    <td>1</td>
+    <td>0</td>
+    <td>0</td>
+    <td><a href="javascript:showClassDetail('c5',1)">Detail</a></td>
+</tr>
+
+<tr id='pt5.1' class='hiddenRow'>
+    <td class='none'><div class='testcase'>testCase: 校验cmimToken</div></td>
+    <td colspan='5' align='center'>
+
+    <!--css div popup start-->
+    <a class="popup_link" onfocus='this.blur();' href="javascript:showTestDetail('div_pt5.1')" >
+        pass</a>
+
+    <div id='div_pt5.1' class="popup_window">
+        <div style='text-align: right; color:red;cursor:pointer'>
+        <a onfocus='this.blur();' onclick="document.getElementById('div_pt5.1').style.display = 'none' " >
+           [x]</a>
+        </div>
+        <pre>
+        
+pt5.1: -------------------- AT_CX_CC_TC001：校验cmimToken --------------------
+token值: b5b91835dc856d25e9cdc89286e6b5a2ae98904094c1d857f942bddaf397d96c
+访问地址： http://carchat.uat.k8s02.ecloud.virtueit.net:81/user/v0/checkCmimToken?cmimToken=ed74faca-b0ff-421a-a1ee-b30960d8e03c&amp;corporationSerial=001
+ 请求结果： {"status":"0000_0","messages":["执行成功"],"result":{"phone":"18311111571","appLogoutStatus":"0","vehicleLogoutStatus":"0","serial":"c3d55d7493c94930a0f9855b0c93af2a","userId":"ff9087d51b19c776e36961954b62a716"}}
+---------------------&gt;
+&lt;Response [200]&gt;
+
+
+        </pre>
+    </div>
+    <!--css div popup end-->
+
+    </td>
+</tr>
+
+<tr class='passClass'>
+    <td>CorperationLogin</td>
+    <td>1</td>
+    <td>1</td>
+    <td>0</td>
+    <td>0</td>
+    <td><a href="javascript:showClassDetail('c6',1)">Detail</a></td>
+</tr>
+
+<tr id='pt6.1' class='hiddenRow'>
+    <td class='none'><div class='testcase'>testCase: 企业登陆</div></td>
+    <td colspan='5' align='center'>
+
+    <!--css div popup start-->
+    <a class="popup_link" onfocus='this.blur();' href="javascript:showTestDetail('div_pt6.1')" >
+        pass</a>
+
+    <div id='div_pt6.1' class="popup_window">
+        <div style='text-align: right; color:red;cursor:pointer'>
+        <a onfocus='this.blur();' onclick="document.getElementById('div_pt6.1').style.display = 'none' " >
+           [x]</a>
+        </div>
+        <pre>
+        
+pt6.1: -------------------- AT_CX_CorL_TC001：企业登陆 --------------------
+访问地址： http://carchat.uat.k8s02.ecloud.virtueit.net:81/user/v0/corporationLogin
+ 请求结果： {"status":"0000_0","messages":["执行成功"],"result":{"token":"46599a5b-d929-422a-a201-7d571fe91890","deviceType":null,"deviceUID":null,"serial":"003","dueTime":86400000}}
+---------------------&gt;
+&lt;Response [200]&gt;
+
+
+        </pre>
+    </div>
+    <!--css div popup end-->
+
+    </td>
+</tr>
+
+<tr class='passClass'>
+    <td>ForwardMessage</td>
+    <td>1</td>
+    <td>1</td>
+    <td>0</td>
+    <td>0</td>
+    <td><a href="javascript:showClassDetail('c7',1)">Detail</a></td>
+</tr>
+
+<tr id='pt7.1' class='hiddenRow'>
+    <td class='none'><div class='testcase'>testCase: 接人推送自定义消息回执</div></td>
+    <td colspan='5' align='center'>
+
+    <!--css div popup start-->
+    <a class="popup_link" onfocus='this.blur();' href="javascript:showTestDetail('div_pt7.1')" >
+        pass</a>
+
+    <div id='div_pt7.1' class="popup_window">
+        <div style='text-align: right; color:red;cursor:pointer'>
+        <a onfocus='this.blur();' onclick="document.getElementById('div_pt7.1').style.display = 'none' " >
+           [x]</a>
+        </div>
+        <pre>
+        
+pt7.1: -------------------- AT_CX_FM_TC001：转发自定义消息回执 --------------------
+token值: b5b91835dc856d25e9cdc89286e6b5a2ae98904094c1d857f942bddaf397d96c
+访问地址： http://carchat.uat.k8s02.ecloud.virtueit.net:81/user/v0/forwardMessage
+ 请求结果： {"status":"0001_8","messages":["当前用户已离线"],"result":null}
+{"status":"0001_8","messages":["当前用户已离线"],"result":null}
+---------------------&gt;
+
+
+        </pre>
+    </div>
+    <!--css div popup end-->
+
+    </td>
+</tr>
+
+<tr class='passClass'>
+    <td>Pickup</td>
+    <td>1</td>
+    <td>1</td>
+    <td>0</td>
+    <td>0</td>
+    <td><a href="javascript:showClassDetail('c8',1)">Detail</a></td>
+</tr>
+
+<tr id='pt8.1' class='hiddenRow'>
+    <td class='none'><div class='testcase'>testCase: 单点位置上传</div></td>
+    <td colspan='5' align='center'>
+
+    <!--css div popup start-->
+    <a class="popup_link" onfocus='this.blur();' href="javascript:showTestDetail('div_pt8.1')" >
+        pass</a>
+
+    <div id='div_pt8.1' class="popup_window">
+        <div style='text-align: right; color:red;cursor:pointer'>
+        <a onfocus='this.blur();' onclick="document.getElementById('div_pt8.1').style.display = 'none' " >
+           [x]</a>
+        </div>
+        <pre>
+        
+pt8.1: -------------------- AT_CX_Pickup_TC001：接人推送自定义消息 --------------------
+token值: b5b91835dc856d25e9cdc89286e6b5a2ae98904094c1d857f942bddaf397d96c
+访问地址： http://carchat.uat.k8s02.ecloud.virtueit.net:81/user/v0//pickup
+ 请求结果： {"status":"0001_8","messages":["当前用户已离线"],"result":null}
+{"status":"0001_8","messages":["当前用户已离线"],"result":null}
+---------------------&gt;
+
+
+        </pre>
+    </div>
+    <!--css div popup end-->
+
+    </td>
+</tr>
+
+<tr class='passClass'>
+    <td>PickupCustomReceipt</td>
+    <td>1</td>
+    <td>1</td>
+    <td>0</td>
+    <td>0</td>
+    <td><a href="javascript:showClassDetail('c9',1)">Detail</a></td>
+</tr>
+
+<tr id='pt9.1' class='hiddenRow'>
+    <td class='none'><div class='testcase'>testCase: 接人推送自定义消息回执</div></td>
+    <td colspan='5' align='center'>
+
+    <!--css div popup start-->
+    <a class="popup_link" onfocus='this.blur();' href="javascript:showTestDetail('div_pt9.1')" >
+        pass</a>
+
+    <div id='div_pt9.1' class="popup_window">
+        <div style='text-align: right; color:red;cursor:pointer'>
+        <a onfocus='this.blur();' onclick="document.getElementById('div_pt9.1').style.display = 'none' " >
+           [x]</a>
+        </div>
+        <pre>
+        
+pt9.1: -------------------- AT_CX_PRC_TC001：接人推送自定义消息回执 --------------------
+token值: b5b91835dc856d25e9cdc89286e6b5a2ae98904094c1d857f942bddaf397d96c
+访问地址： http://carchat.uat.k8s02.ecloud.virtueit.net:81/user/v0/pickupCustomReceipt
+ 请求结果： {"status":"0001_8","messages":["当前用户已离线"],"result":null}
+{"status":"0001_8","messages":["当前用户已离线"],"result":null}
+---------------------&gt;
+
+
+        </pre>
+    </div>
+    <!--css div popup end-->
+
+    </td>
+</tr>
+
+<tr class='passClass'>
+    <td>PushCustomMessage</td>
+    <td>1</td>
+    <td>1</td>
+    <td>0</td>
+    <td>0</td>
+    <td><a href="javascript:showClassDetail('c10',1)">Detail</a></td>
+</tr>
+
+<tr id='pt10.1' class='hiddenRow'>
+    <td class='none'><div class='testcase'>testCase: 接人推送自定义消息</div></td>
+    <td colspan='5' align='center'>
+
+    <!--css div popup start-->
+    <a class="popup_link" onfocus='this.blur();' href="javascript:showTestDetail('div_pt10.1')" >
+        pass</a>
+
+    <div id='div_pt10.1' class="popup_window">
+        <div style='text-align: right; color:red;cursor:pointer'>
+        <a onfocus='this.blur();' onclick="document.getElementById('div_pt10.1').style.display = 'none' " >
+           [x]</a>
+        </div>
+        <pre>
+        
+pt10.1: -------------------- AT_CX_PCM_TC001：接人推送自定义消息 --------------------
+token值: b5b91835dc856d25e9cdc89286e6b5a2ae98904094c1d857f942bddaf397d96c
+访问地址： http://carchat.uat.k8s02.ecloud.virtueit.net:81/user/v0//pushCustomMessage
+ 请求结果： {"status":"0001_8","messages":["当前用户已离线"],"result":null}
+{"status":"0001_8","messages":["当前用户已离线"],"result":null}
+---------------------&gt;
+
+
+        </pre>
+    </div>
+    <!--css div popup end-->
+
+    </td>
+</tr>
+
+<tr class='passClass'>
+    <td>UploadFile</td>
+    <td>1</td>
+    <td>1</td>
+    <td>0</td>
+    <td>0</td>
+    <td><a href="javascript:showClassDetail('c11',1)">Detail</a></td>
+</tr>
+
+<tr id='pt11.1' class='hiddenRow'>
+    <td class='none'><div class='testcase'>testCase: 单点位置上传</div></td>
+    <td colspan='5' align='center'>
+
+    <!--css div popup start-->
+    <a class="popup_link" onfocus='this.blur();' href="javascript:showTestDetail('div_pt11.1')" >
+        pass</a>
+
+    <div id='div_pt11.1' class="popup_window">
+        <div style='text-align: right; color:red;cursor:pointer'>
+        <a onfocus='this.blur();' onclick="document.getElementById('div_pt11.1').style.display = 'none' " >
+           [x]</a>
+        </div>
+        <pre>
+        
+pt11.1: -------------------- AT_CX_UF_TC001：文件位置上传 --------------------
+token值: b5b91835dc856d25e9cdc89286e6b5a2ae98904094c1d857f942bddaf397d96c
+访问地址： http://carchat.uat.k8s02.ecloud.virtueit.net:81/user/v0/location/upload/file
+ 请求结果： {"status":"0000_0","messages":["执行成功"],"result":true}
+{"status":"0000_0","messages":["执行成功"],"result":true}
+---------------------&gt;
+
+
+        </pre>
+    </div>
+    <!--css div popup end-->
+
+    </td>
+</tr>
+
+<tr class='passClass'>
+    <td>UploadPoint</td>
+    <td>1</td>
+    <td>1</td>
+    <td>0</td>
+    <td>0</td>
+    <td><a href="javascript:showClassDetail('c12',1)">Detail</a></td>
+</tr>
+
+<tr id='pt12.1' class='hiddenRow'>
+    <td class='none'><div class='testcase'>testCase: 单点位置上传</div></td>
+    <td colspan='5' align='center'>
+
+    <!--css div popup start-->
+    <a class="popup_link" onfocus='this.blur();' href="javascript:showTestDetail('div_pt12.1')" >
+        pass</a>
+
+    <div id='div_pt12.1' class="popup_window">
+        <div style='text-align: right; color:red;cursor:pointer'>
+        <a onfocus='this.blur();' onclick="document.getElementById('div_pt12.1').style.display = 'none' " >
+           [x]</a>
+        </div>
+        <pre>
+        
+pt12.1: -------------------- AT_CX_UP_TC001：单点位置上传 --------------------
+token值: b5b91835dc856d25e9cdc89286e6b5a2ae98904094c1d857f942bddaf397d96c
+访问地址： http://carchat.uat.k8s02.ecloud.virtueit.net:81/user/v0/location/upload/point
+ 请求结果： {"status":"0000_0","messages":["执行成功"],"result":true}
+{"status":"0000_0","messages":["执行成功"],"result":true}
+---------------------&gt;
+
+
+        </pre>
+    </div>
+    <!--css div popup end-->
+
+    </td>
+</tr>
+
+<tr class='passClass'>
+    <td>Accredit</td>
+    <td>1</td>
+    <td>1</td>
+    <td>0</td>
+    <td>0</td>
+    <td><a href="javascript:showClassDetail('c13',1)">Detail</a></td>
+</tr>
+
+<tr id='pt13.1' class='hiddenRow'>
+    <td class='none'><div class='testcase'>testCase: 用户授权</div></td>
+    <td colspan='5' align='center'>
+
+    <!--css div popup start-->
+    <a class="popup_link" onfocus='this.blur();' href="javascript:showTestDetail('div_pt13.1')" >
+        pass</a>
+
+    <div id='div_pt13.1' class="popup_window">
+        <div style='text-align: right; color:red;cursor:pointer'>
+        <a onfocus='this.blur();' onclick="document.getElementById('div_pt13.1').style.display = 'none' " >
+           [x]</a>
+        </div>
+        <pre>
+        
+pt13.1: -------------------- AT_US_UL_TC001：用户授权 --------------------
+token值: b5b91835dc856d25e9cdc89286e6b5a2ae98904094c1d857f942bddaf397d96c
+访问地址： http://carchat.uat.k8s02.ecloud.virtueit.net:81/user/v0//accredit
+ 请求结果： {"status":"0001_2","messages":["用户已经存在"],"result":null}
+---------------------&gt;
+
+
+        </pre>
+    </div>
+    <!--css div popup end-->
+
+    </td>
+</tr>
+
+<tr class='passClass'>
+    <td>CarAccredit</td>
+    <td>1</td>
+    <td>1</td>
+    <td>0</td>
+    <td>0</td>
+    <td><a href="javascript:showClassDetail('c14',1)">Detail</a></td>
+</tr>
+
+<tr id='pt14.1' class='hiddenRow'>
+    <td class='none'><div class='testcase'>testCase: 确认车机登陆</div></td>
+    <td colspan='5' align='center'>
+
+    <!--css div popup start-->
+    <a class="popup_link" onfocus='this.blur();' href="javascript:showTestDetail('div_pt14.1')" >
+        pass</a>
+
+    <div id='div_pt14.1' class="popup_window">
+        <div style='text-align: right; color:red;cursor:pointer'>
+        <a onfocus='this.blur();' onclick="document.getElementById('div_pt14.1').style.display = 'none' " >
+           [x]</a>
+        </div>
+        <pre>
+        
+pt14.1: -------------------- AT_CX_CA_TC001：确认车机登陆 --------------------
+token值: b5b91835dc856d25e9cdc89286e6b5a2ae98904094c1d857f942bddaf397d96c
+访问地址： http://carchat.uat.k8s02.ecloud.virtueit.net:81/user/v0//carAccredit
+ 请求结果： {"status":"0001_17","messages":["请求不存在或者已过期"],"result":null}
+---------------------&gt;
+
+
+        </pre>
+    </div>
+    <!--css div popup end-->
+
+    </td>
+</tr>
+
+<tr class='passClass'>
+    <td>CarLogin</td>
+    <td>1</td>
+    <td>1</td>
+    <td>0</td>
+    <td>0</td>
+    <td><a href="javascript:showClassDetail('c15',1)">Detail</a></td>
+</tr>
+
+<tr id='pt15.1' class='hiddenRow'>
+    <td class='none'><div class='testcase'>testCase: 车机登陆</div></td>
+    <td colspan='5' align='center'>
+
+    <!--css div popup start-->
+    <a class="popup_link" onfocus='this.blur();' href="javascript:showTestDetail('div_pt15.1')" >
+        pass</a>
+
+    <div id='div_pt15.1' class="popup_window">
+        <div style='text-align: right; color:red;cursor:pointer'>
+        <a onfocus='this.blur();' onclick="document.getElementById('div_pt15.1').style.display = 'none' " >
+           [x]</a>
+        </div>
+        <pre>
+        
+pt15.1: -------------------- AT_CX_CL_TC001：车机登陆 --------------------
+访问地址： http://carchat.uat.k8s02.ecloud.virtueit.net:81/user/v0//carLogin
+ 请求结果： {"status":"0000_0","messages":["执行成功"],"result":{"token":"d7430a4f62150ef515a8ef4aef818499ec14fb20818a5ea547dfbc5687111b6b","phone":"18311111571","serial":"c3d55d7493c94930a0f9855b0c93af2a","userId":"ff9087d51b19c776e36961954b62a716","userType":null,"name":null,"nick":"18311111571","image":"JM123","age":null,"gender":null,"thirdPartyToken":"a3898824-8651-4011-affb-4270ea6cf413"}}
+---------------------&gt;
+
+
+        </pre>
+    </div>
+    <!--css div popup end-->
+
+    </td>
+</tr>
+
+<tr class='passClass'>
+    <td>Login</td>
+    <td>1</td>
+    <td>1</td>
+    <td>0</td>
+    <td>0</td>
+    <td><a href="javascript:showClassDetail('c16',1)">Detail</a></td>
+</tr>
+
+<tr id='pt16.1' class='hiddenRow'>
+    <td class='none'><div class='testcase'>testCase: 登陆</div></td>
+    <td colspan='5' align='center'>
+
+    <!--css div popup start-->
+    <a class="popup_link" onfocus='this.blur();' href="javascript:showTestDetail('div_pt16.1')" >
+        pass</a>
+
+    <div id='div_pt16.1' class="popup_window">
+        <div style='text-align: right; color:red;cursor:pointer'>
+        <a onfocus='this.blur();' onclick="document.getElementById('div_pt16.1').style.display = 'none' " >
+           [x]</a>
+        </div>
+        <pre>
+        
+pt16.1: -------------------- AT_US_UL_TC001：登陆 --------------------
+访问地址： http://carchat.uat.k8s02.ecloud.virtueit.net:81/user/v0//login
+ 请求结果： {"status":"0000_0","messages":["执行成功"],"result":{"token":"af7938866d34cfc807445b75e8bbd34dc83d931706bf8de42b3f1af7e0a2cb1a","phone":"18311111571","serial":"c3d55d7493c94930a0f9855b0c93af2a","userId":"ff9087d51b19c776e36961954b62a716","userType":null,"name":null,"nick":"18311111571","image":"JM123","age":null,"gender":null,"thirdPartyToken":"a540c454-9922-4da4-ae4d-e62b3c7fe311"}}
+{u'status': u'0000_0', u'messages': [u'\u6267\u884c\u6210\u529f'], u'result': {u'nick': u'18311111571', u'name': None, u'userType': None, u'gender': None, u'image': u'JM123', u'thirdPartyToken': u'a540c454-9922-4da4-ae4d-e62b3c7fe311', u'userId': u'ff9087d51b19c776e36961954b62a716', u'phone': u'18311111571', u'token': u'af7938866d34cfc807445b75e8bbd34dc83d931706bf8de42b3f1af7e0a2cb1a', u'serial': u'c3d55d7493c94930a0f9855b0c93af2a', u'age': None}}
+---------------------&gt;
+&lt;Response [200]&gt;
+
+
+        </pre>
+    </div>
+    <!--css div popup end-->
+
+    </td>
+</tr>
+
+<tr class='passClass'>
+    <td>Logout</td>
+    <td>1</td>
+    <td>1</td>
+    <td>0</td>
+    <td>0</td>
+    <td><a href="javascript:showClassDetail('c17',1)">Detail</a></td>
+</tr>
+
+<tr id='pt17.1' class='hiddenRow'>
+    <td class='none'><div class='testcase'>testCase: 登出</div></td>
+    <td colspan='5' align='center'>
+
+    <!--css div popup start-->
+    <a class="popup_link" onfocus='this.blur();' href="javascript:showTestDetail('div_pt17.1')" >
+        pass</a>
+
+    <div id='div_pt17.1' class="popup_window">
+        <div style='text-align: right; color:red;cursor:pointer'>
+        <a onfocus='this.blur();' onclick="document.getElementById('div_pt17.1').style.display = 'none' " >
+           [x]</a>
+        </div>
+        <pre>
+        
+pt17.1: -------------------- AT_US_ULO_TC001：登出 --------------------
+token值: af7938866d34cfc807445b75e8bbd34dc83d931706bf8de42b3f1af7e0a2cb1a
+访问地址： http://carchat.uat.k8s02.ecloud.virtueit.net:81/user/v0//logout
+ 请求结果： {"status":"0000_0","messages":["执行成功"],"result":true}
+{u'status': u'0000_0', u'messages': [u'\u6267\u884c\u6210\u529f'], u'result': True}
+---------------------&gt;
+
+
+        </pre>
+    </div>
+    <!--css div popup end-->
+
+    </td>
+</tr>
+
+<tr class='passClass'>
+    <td>LogoutByPhone</td>
+    <td>1</td>
+    <td>1</td>
+    <td>0</td>
+    <td>0</td>
+    <td><a href="javascript:showClassDetail('c18',1)">Detail</a></td>
+</tr>
+
+<tr id='pt18.1' class='hiddenRow'>
+    <td class='none'><div class='testcase'>testCase: 手机踢车机登陆</div></td>
+    <td colspan='5' align='center'>
+
+    <!--css div popup start-->
+    <a class="popup_link" onfocus='this.blur();' href="javascript:showTestDetail('div_pt18.1')" >
+        pass</a>
+
+    <div id='div_pt18.1' class="popup_window">
+        <div style='text-align: right; color:red;cursor:pointer'>
+        <a onfocus='this.blur();' onclick="document.getElementById('div_pt18.1').style.display = 'none' " >
+           [x]</a>
+        </div>
+        <pre>
+        
+pt18.1: -------------------- AT_CX_LBP_TC001：手机踢车机登陆 --------------------
+token值: af7938866d34cfc807445b75e8bbd34dc83d931706bf8de42b3f1af7e0a2cb1a
+访问地址： http://carchat.uat.k8s02.ecloud.virtueit.net:81/user/v0//logout
+ 请求结果： {"status":"0000_0","messages":["执行成功"],"result":true}
+---------------------&gt;
+
+
+        </pre>
+    </div>
+    <!--css div popup end-->
+
+    </td>
+</tr>
+
+<tr class='passClass'>
+    <td>AcceptMess</td>
+    <td>1</td>
+    <td>1</td>
+    <td>0</td>
+    <td>0</td>
+    <td><a href="javascript:showClassDetail('c19',1)">Detail</a></td>
+</tr>
+
+<tr id='pt19.1' class='hiddenRow'>
+    <td class='none'><div class='testcase'>testCase: 接受上行消息</div></td>
+    <td colspan='5' align='center'>
+
+    <!--css div popup start-->
+    <a class="popup_link" onfocus='this.blur();' href="javascript:showTestDetail('div_pt19.1')" >
+        pass</a>
+
+    <div id='div_pt19.1' class="popup_window">
+        <div style='text-align: right; color:red;cursor:pointer'>
+        <a onfocus='this.blur();' onclick="document.getElementById('div_pt19.1').style.display = 'none' " >
+           [x]</a>
+        </div>
+        <pre>
+        
+pt19.1: -------------------- AT_CX_AM_TC001：接受上行消息 --------------------
+token值: af7938866d34cfc807445b75e8bbd34dc83d931706bf8de42b3f1af7e0a2cb1a
+访问地址： http://carchat.uat.k8s02.ecloud.virtueit.net:81/user/v0//acceptMess?msg_id=123&amp;msg_content=测试上行消息&amp;recv_time=12&amp;sp_code=12&amp;src_mobile=12
+ 请求结果： {"status":"0000_0","messages":["执行成功"],"result":true}
+{"status":"0000_0","messages":["执行成功"],"result":true}
+---------------------&gt;
+
+
+        </pre>
+    </div>
+    <!--css div popup end-->
+
+    </td>
+</tr>
+
+<tr class='passClass'>
+    <td>PlatformSendMessages</td>
+    <td>1</td>
+    <td>1</td>
+    <td>0</td>
+    <td>0</td>
+    <td><a href="javascript:showClassDetail('c20',1)">Detail</a></td>
+</tr>
+
+<tr id='pt20.1' class='hiddenRow'>
+    <td class='none'><div class='testcase'>testCase: 平台发送消息</div></td>
+    <td colspan='5' align='center'>
+
+    <!--css div popup start-->
+    <a class="popup_link" onfocus='this.blur();' href="javascript:showTestDetail('div_pt20.1')" >
+        pass</a>
+
+    <div id='div_pt20.1' class="popup_window">
+        <div style='text-align: right; color:red;cursor:pointer'>
+        <a onfocus='this.blur();' onclick="document.getElementById('div_pt20.1').style.display = 'none' " >
+           [x]</a>
+        </div>
+        <pre>
+        
+pt20.1: -------------------- AT_CX_PSM_TC001：平台发送消息 --------------------
+token值: af7938866d34cfc807445b75e8bbd34dc83d931706bf8de42b3f1af7e0a2cb1a
+访问地址： http://carchat.uat.k8s02.ecloud.virtueit.net:81/user/v0//platformSendMessages
+ 请求结果： {"status":"0002_5","messages":["您今天已经给该用户发送过邀请短信了"],"result":null}
+{"status":"0002_5","messages":["您今天已经给该用户发送过邀请短信了"],"result":null}
+---------------------&gt;
+
+
+        </pre>
+    </div>
+    <!--css div popup end-->
+
+    </td>
+</tr>
+
+<tr class='passClass'>
+    <td>SdkSendMessages</td>
+    <td>1</td>
+    <td>1</td>
+    <td>0</td>
+    <td>0</td>
+    <td><a href="javascript:showClassDetail('c21',1)">Detail</a></td>
+</tr>
+
+<tr id='pt21.1' class='hiddenRow'>
+    <td class='none'><div class='testcase'>testCase: SDK发送消息</div></td>
+    <td colspan='5' align='center'>
+
+    <!--css div popup start-->
+    <a class="popup_link" onfocus='this.blur();' href="javascript:showTestDetail('div_pt21.1')" >
+        pass</a>
+
+    <div id='div_pt21.1' class="popup_window">
+        <div style='text-align: right; color:red;cursor:pointer'>
+        <a onfocus='this.blur();' onclick="document.getElementById('div_pt21.1').style.display = 'none' " >
+           [x]</a>
+        </div>
+        <pre>
+        
+pt21.1: -------------------- AT_CX_SSM_TC001：SDK发送消息 --------------------
+token值: af7938866d34cfc807445b75e8bbd34dc83d931706bf8de42b3f1af7e0a2cb1a
+访问地址： http://carchat.uat.k8s02.ecloud.virtueit.net:81/user/v0//sdkSendMessages
+ 请求结果： {"status":"0000_0","messages":["执行成功"],"result":{"id":6182,"serial":"e3e15bc752b6454c97f715b7312dabc2","createTime":1557223909021,"createBy":null,"modifyTime":null,"modifyBy":null,"isDelete":0,"userSerial":"c3d55d7493c94930a0f9855b0c93af2a","acceptNum":"15202119863","messConents":"你好，你的好友「18311111571」请求来接你，快来看看吧→{h5url}（接人链接），回T退订","messType":1,"senderName":"18311111571","messageId":null,"supplier":"weilai"}}
+{"status":"0000_0","messages":["执行成功"],"result":{"id":6182,"serial":"e3e15bc752b6454c97f715b7312dabc2","createTime":1557223909021,"createBy":null,"modifyTime":null,"modifyBy":null,"isDelete":0,"userSerial":"c3d55d7493c94930a0f9855b0c93af2a","acceptNum":"15202119863","messConents":"你好，你的好友「18311111571」请求来接你，快来看看吧→{h5url}（接人链接），回T退订","messType":1,"senderName":"18311111571","messageId":null,"supplier":"weilai"}}
+---------------------&gt;
+
+
+        </pre>
+    </div>
+    <!--css div popup end-->
+
+    </td>
+</tr>
+
+<tr class='passClass'>
+    <td>GetFriendList</td>
+    <td>1</td>
+    <td>1</td>
+    <td>0</td>
+    <td>0</td>
+    <td><a href="javascript:showClassDetail('c22',1)">Detail</a></td>
+</tr>
+
+<tr id='pt22.1' class='hiddenRow'>
+    <td class='none'><div class='testcase'>testCase: 获取好友列表</div></td>
+    <td colspan='5' align='center'>
+
+    <!--css div popup start-->
+    <a class="popup_link" onfocus='this.blur();' href="javascript:showTestDetail('div_pt22.1')" >
+        pass</a>
+
+    <div id='div_pt22.1' class="popup_window">
+        <div style='text-align: right; color:red;cursor:pointer'>
+        <a onfocus='this.blur();' onclick="document.getElementById('div_pt22.1').style.display = 'none' " >
+           [x]</a>
+        </div>
+        <pre>
+        
+pt22.1: -------------------- AT_CX_GFL_TC001：获取好友列表 --------------------
+token值: af7938866d34cfc807445b75e8bbd34dc83d931706bf8de42b3f1af7e0a2cb1a
+访问地址： http://carchat.uat.k8s02.ecloud.virtueit.net:81/user/v0/userInfo/getFriendList?userId=ff9087d51b19c776e36961954b62a716
+ 请求结果： {"status":"0000_0","messages":["执行成功"],"result":{"ret":200,"retMsg":"OK","total":0,"friendInfos":[]}}
+---------------------&gt;
+&lt;Response [200]&gt;
+
+
+        </pre>
+    </div>
+    <!--css div popup end-->
+
+    </td>
+</tr>
+
+<tr class='passClass'>
+    <td>QueryUserDetails</td>
+    <td>1</td>
+    <td>1</td>
+    <td>0</td>
+    <td>0</td>
+    <td><a href="javascript:showClassDetail('c23',1)">Detail</a></td>
+</tr>
+
+<tr id='pt23.1' class='hiddenRow'>
+    <td class='none'><div class='testcase'>testCase: 获取好友列表</div></td>
+    <td colspan='5' align='center'>
+
+    <!--css div popup start-->
+    <a class="popup_link" onfocus='this.blur();' href="javascript:showTestDetail('div_pt23.1')" >
+        pass</a>
+
+    <div id='div_pt23.1' class="popup_window">
+        <div style='text-align: right; color:red;cursor:pointer'>
+        <a onfocus='this.blur();' onclick="document.getElementById('div_pt23.1').style.display = 'none' " >
+           [x]</a>
+        </div>
+        <pre>
+        
+pt23.1: -------------------- AT_CX_QUD_TC001：获取好友详情 --------------------
+token值: af7938866d34cfc807445b75e8bbd34dc83d931706bf8de42b3f1af7e0a2cb1a
+访问地址： http://carchat.uat.k8s02.ecloud.virtueit.net:81/user/v0/userInfo/queryUserDetails/ff9087d51b19c776e36961954b62a716
+ 请求结果： {"status":"0000_0","messages":["执行成功"],"result":null}
+---------------------&gt;
+&lt;Response [200]&gt;
+
+
+        </pre>
+    </div>
+    <!--css div popup end-->
+
+    </td>
+</tr>
+
+<tr class='passClass'>
+    <td>Refresh</td>
+    <td>1</td>
+    <td>1</td>
+    <td>0</td>
+    <td>0</td>
+    <td><a href="javascript:showClassDetail('c24',1)">Detail</a></td>
+</tr>
+
+<tr id='pt24.1' class='hiddenRow'>
+    <td class='none'><div class='testcase'>testCase: 刷新用户信息</div></td>
+    <td colspan='5' align='center'>
+
+    <!--css div popup start-->
+    <a class="popup_link" onfocus='this.blur();' href="javascript:showTestDetail('div_pt24.1')" >
+        pass</a>
+
+    <div id='div_pt24.1' class="popup_window">
+        <div style='text-align: right; color:red;cursor:pointer'>
+        <a onfocus='this.blur();' onclick="document.getElementById('div_pt24.1').style.display = 'none' " >
+           [x]</a>
+        </div>
+        <pre>
+        
+pt24.1: -------------------- AT_CX_R_TC001：刷新用户信息 --------------------
+token值: af7938866d34cfc807445b75e8bbd34dc83d931706bf8de42b3f1af7e0a2cb1a
+访问地址： http://carchat.uat.k8s02.ecloud.virtueit.net:81/user/v0/userInfo/refresh
+ 请求结果： {"status":"0000_0","messages":["执行成功"],"result":true}
+{"status":"0000_0","messages":["执行成功"],"result":true}
+---------------------&gt;
+
+
+        </pre>
+    </div>
+    <!--css div popup end-->
+
+    </td>
+</tr>
+
+<tr class='passClass'>
+    <td>UpdateUserinfo</td>
+    <td>1</td>
+    <td>1</td>
+    <td>0</td>
+    <td>0</td>
+    <td><a href="javascript:showClassDetail('c25',1)">Detail</a></td>
+</tr>
+
+<tr id='pt25.1' class='hiddenRow'>
+    <td class='none'><div class='testcase'>testCase: 更新用户信息</div></td>
+    <td colspan='5' align='center'>
+
+    <!--css div popup start-->
+    <a class="popup_link" onfocus='this.blur();' href="javascript:showTestDetail('div_pt25.1')" >
+        pass</a>
+
+    <div id='div_pt25.1' class="popup_window">
+        <div style='text-align: right; color:red;cursor:pointer'>
+        <a onfocus='this.blur();' onclick="document.getElementById('div_pt25.1').style.display = 'none' " >
+           [x]</a>
+        </div>
+        <pre>
+        
+pt25.1: -------------------- AT_CX_UUI_TC001：更新用户信息 --------------------
+token值: af7938866d34cfc807445b75e8bbd34dc83d931706bf8de42b3f1af7e0a2cb1a
+访问地址： http://carchat.uat.k8s02.ecloud.virtueit.net:81/user/v0/userInfo/update
+ 请求结果： {"status":"0000_0","messages":["执行成功"],"result":true}
+{"status":"0000_0","messages":["执行成功"],"result":true}
+---------------------&gt;
 
 
         </pre>
@@ -309,10 +1190,10 @@ ValueError: No JSON object could be decoded
 
 <tr id='total_row'>
     <td>Total</td>
-    <td>2</td>
+    <td>25</td>
+    <td>25</td>
     <td>0</td>
     <td>0</td>
-    <td>2</td>
     <td>&nbsp;</td>
 </tr>
 </table>

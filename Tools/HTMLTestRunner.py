@@ -728,7 +728,7 @@ class HTMLTestRunner(Template_mixin):
 
             row = self.REPORT_CLASS_TMPL % dict(
                 style = ne > 0 and 'errorClass' or nf > 0 and 'failClass' or 'passClass',
-                desc = desc,
+                desc = desc.split('.')[1],
                 count = np+nf+ne,
                 Pass = np,
                 fail = nf,
